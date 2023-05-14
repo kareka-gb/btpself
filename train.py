@@ -9,7 +9,7 @@ from tensorflow.keras.losses import BinaryCrossentropy
 from tensorflow.keras.losses import MeanAbsoluteError
 from tensorflow.keras.losses import MeanSquaredError
 from tensorflow.keras.metrics import Mean
-from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.optimizers.legacy import Adam
 from tensorflow.keras.optimizers.schedules import PiecewiseConstantDecay
 
 
