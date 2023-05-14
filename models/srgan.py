@@ -3,7 +3,7 @@ from tensorflow.python.keras.models import Model
 from tensorflow.keras.layers import BatchNormalization
 from tensorflow.keras.applications.vgg19 import VGG19
 
-from common import pixel_shuffle, normalize_01, normalize_m11, denormalize_m11
+from models.common import pixel_shuffle, normalize_01, normalize_m11, denormalize_m11
 
 # changed according to my dataset
 LR_SIZE = 150
