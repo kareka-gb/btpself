@@ -3,7 +3,7 @@ import tensorflow as tf
 from tensorflow.python.data.experimental import AUTOTUNE
 
 class drone_data:
-    def __init__(self, subset='train', images_dir='data') -> None:
+    def __init__(self, subset='train', images_dir='btpself/data') -> None:
         if subset == 'train':
             self.image_ids = range(1, 1601)
         elif subset == 'valid':
