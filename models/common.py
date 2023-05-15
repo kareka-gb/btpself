@@ -2,7 +2,7 @@ import numpy as np
 import tensorflow as tf
 
 
-DRONE_RGB_MEAN = np.array([67.18070667,85.5615166, 68.65738522])
+DRONE_RGB_MEAN = np.array([67.79437338, 86.44800688, 69.39441841])
 
 
 def resolve_single(model, lr):

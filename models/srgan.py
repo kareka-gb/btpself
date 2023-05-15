@@ -6,8 +6,8 @@ from tensorflow.keras.applications.vgg19 import VGG19
 from models.common import pixel_shuffle, normalize_01, normalize_m11, denormalize_m11
 
 # changed according to my dataset
-LR_SIZE = 150
-HR_SIZE = 600
+LR_SIZE = 40
+HR_SIZE = 160
 
 
 def upsample(x_in, num_filters):

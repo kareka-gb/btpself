@@ -1,4 +1,4 @@
-name: sisr
+name: btp
 dependencies:
 - python=3.6
 - cudatoolkit=10.1

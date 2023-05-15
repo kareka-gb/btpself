@@ -2,14 +2,18 @@ import os
 import tensorflow as tf
 from tensorflow.python.data.experimental import AUTOTUNE
 
+"""
+ Data size : 12
+"""
+
 class drone_data:
-    def __init__(self, subset='train', images_dir='btpself/data') -> None:
+    def __init__(self, subset='train', images_dir='/home/kareka/Academics/btpself/data') -> None:
         if subset == 'train':
-            self.image_ids = range(1, 1601)
+            self.image_ids = range(1, 10001)
         elif subset == 'valid':
-            self.image_ids = range(1601, 1801)
+            self.image_ids = range(10001, 12201)
         elif subset == 'test':
-            self.image_ids = range(1801, 1806)
+            self.image_ids = range(12180, 12190)
         else:
             raise ValueError("subset must be 'train' or 'valid'")
         
