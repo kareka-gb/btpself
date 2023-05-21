@@ -1,0 +1,5 @@
+PSNR:
+edsr-32 - 32.196091 - 30000 steps
+wdsr-32 - 32.245399 - 30000 steps
+edsr-32-srgan - 28.908466 - 15000 steps
+wdsr-32-srgan - 32.196091 - 15000 steps

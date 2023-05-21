@@ -1,5 +1,6 @@
 import sys
 sys.path.append('..')
+import os
 
 from data import drone_data
 import tensorflow as tf
@@ -68,10 +69,6 @@ gan_trainer = SrganTrainer(generator=generator, discriminator=discriminator())
 gan_trainer.train(train_ds, steps=30000)
 generator.save_weights('weights/edsr-32-x4/finetuned_weights.h5')
 
-print("\nTesting EDSR + SRGAN Model with 2200 validation images")
-psnr = trainer.evaluate(valid_ds)
-print(f'PSNR of EDSR + SRGAN = {psnr.numpy():5f}')
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 print("\nFinetuning WDSR Model with SRGAN discriminator for 30000 steps")
@@ -83,9 +80,5 @@ generator.load_weights('weights/wdsr-b-32-x4/weights.h5')
 gan_trainer = SrganTrainer(generator=generator, discriminator=discriminator())
 gan_trainer.train(train_ds, steps=300)
 generator.save_weights('weights/wdsr-b-32-x4/finetuned_weights.h5')
-
-print("\nTesting WDSR + SRGAN Model with 2200 validation images")
-psnr = trainer.evaluate(valid_ds)
-print(f'PSNR of WDSR + SRGAN = {psnr.numpy():5f}')
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
